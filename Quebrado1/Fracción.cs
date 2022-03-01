@@ -23,6 +23,10 @@ namespace Quebrado1
             this.Numerador = numerador;
             this.Denominador = numerador;
         }
+        public Fracción Multiplicacion(Fraccion B)
+        {
+            return new Fracción(Numerador*Numerador B)
+        }
         #endregion
 
     }
