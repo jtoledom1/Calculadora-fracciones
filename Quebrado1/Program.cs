@@ -11,16 +11,22 @@ namespace Quebrado1
         static void Main(string[] args)
         {
             Fracción A = new Fracción(1,2);
-            Fracción B = new Fracción("B",3, 4);
+            Fracción B = new Fracción("B",3, 2);
             Fracción C = A.Multiplicacion(B);
             Fracción D = A / B;
+            Fracción E= A+B;
+            Fracción F = A - B;
             C.NombreOperando = "A*B";
             D.NombreOperando = "A/B";
+            E.NombreOperando = "A+B";
+            F.NombreOperando = "A-B";
             Console.WriteLine($""); 
             Console.WriteLine(A.ToString());
             Console.WriteLine(B.ToString());
             Console.WriteLine(C.ToString());
             Console.WriteLine(D.ToString());
+            Console.WriteLine(E.ToString());
+            Console.WriteLine(F.ToString());
             Console.ReadLine();
         }
     }

@@ -46,6 +46,14 @@ namespace Quebrado1
         {
             return new Fracción(A.Numerador * B.Denominador, A.Denominador * B.Numerador);
         }
+        public static Fracción operator +(Fracción A, Fracción B)
+        {
+            return new Fracción(A.Numerador + B.Numerador, A.Denominador );
+        }
+        public static Fracción operator -(Fracción A, Fracción B)
+        {
+            return new Fracción(A.Numerador - B.Numerador, A.Denominador);
+        }
         public override string ToString()
         {
             return $"{this.NombreOperando} = {this.Numerador}/{this.Denominador}";
