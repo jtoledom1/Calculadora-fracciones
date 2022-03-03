@@ -27,9 +27,9 @@ namespace Quebrado1
             this.Numerador = numerador;
             this.Denominador = denominador;
         }
-        public Fracción(int numerador, int denominador, string nombreOperando)
+        public Fracción(string nombreOperador,int numerador, int denominador)
         {
-            this.NombreOperando = nombreOperando;
+            this.NombreOperando = nombreOperador;
             this.Numerador = numerador;
             this.Denominador = denominador;
         }
@@ -38,10 +38,10 @@ namespace Quebrado1
             return new Fracción(Numerador * B.Numerador , this.Denominador * B.Denominador);
 
         }
-        public string Imprime()
+        public override string ToString()
         {
-            return $"{this.Numerador}/{this.Denominador}";
-        } 
+            return $"{this.NombreOperando} = {this.Numerador}/{this.Denominador}";
+        }
         #endregion
 
     }
