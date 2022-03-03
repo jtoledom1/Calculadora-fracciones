@@ -10,6 +10,12 @@ namespace Quebrado1
     {
         static void Main(string[] args)
         {
+            Fracción A = new Fracción(1,2);
+            Fracción B = new Fracción(2, 2);
+            Fracción C = new Fracción(3, 2);
+            Console.WriteLine($"");
+            Console.WriteLine(A.Imprime());
+            Console.ReadLine();
         }
     }
 }
