@@ -35,8 +35,16 @@ namespace Quebrado1
         }
         public Fracción Multiplicacion(Fracción B)
         {
-            return new Fracción(Numerador * B.Numerador , this.Denominador * B.Denominador);
+          return new Fracción(Numerador * B.Numerador , this.Denominador * B.Denominador);
 
+        }
+        public static Fracción operator *(Fracción A, Fracción B)
+        {
+            return new Fracción(A.Numerador * B.Numerador, A.Denominador * B.Denominador);
+        }
+        public static Fracción operator /(Fracción A, Fracción B)
+        {
+            return new Fracción(A.Numerador * B.Denominador, A.Denominador * B.Numerador);
         }
         public override string ToString()
         {

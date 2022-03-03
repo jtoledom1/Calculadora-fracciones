@@ -12,11 +12,15 @@ namespace Quebrado1
         {
             Fracción A = new Fracción(1,2);
             Fracción B = new Fracción("B",3, 4);
-            Fracción C = new Fracción("C",3,9);
+            Fracción C = A.Multiplicacion(B);
+            Fracción D = A / B;
+            C.NombreOperando = "A*B";
+            D.NombreOperando = "A/B";
             Console.WriteLine($""); 
             Console.WriteLine(A.ToString());
             Console.WriteLine(B.ToString());
             Console.WriteLine(C.ToString());
+            Console.WriteLine(D.ToString());
             Console.ReadLine();
         }
     }
