@@ -24,28 +24,45 @@ namespace Quebrado1
             E.NombreOperando = "A+B";
             F.NombreOperando = "A-B";
             int opción=0;
+            int NumA=0;
+            int NumB=0;
+            int DenB=0;
+            int DenA=0;
             while (opción!=5)
             {
-            Console.WriteLine("+++++++++++++ Calculadora de fracciones +++++++++++++");
-            Console.WriteLine("1. Suma");
-            Console.WriteLine("2. Resta");
-            Console.WriteLine("3. Multiplicación");
-            Console.WriteLine("4. Divisiones");
-            Console.WriteLine("5. SALIR");
-            opción=int.Parse(Console.ReadLine());
-            Console.Clear();
-            Console.WriteLine("Introduce El primer numerador");
-            A.Numerador=double.Parse(Console.ReadLine());
-            Console.WriteLine("Introduce El primer denominador");
-            A.Denominador=double.Parse(Console.ReadLine());
             
-            Console.WriteLine("Introduce El segundo numerador");
-            B.Numerador=double.Parse(Console.ReadLine());
-            Console.WriteLine("Introduce El segundo denominador");
-            B.Denominador=double.Parse(Console.ReadLine());
+                Console.WriteLine("+++++++++++++ Calculadora de fracciones +++++++++++++");
             
-            switch(opción)
-            {
+                Console.WriteLine("1. Suma");
+            
+                Console.WriteLine("2. Resta");
+            
+                Console.WriteLine("3. Multiplicación");
+            
+                Console.WriteLine("4. Divisiones");
+            
+                Console.WriteLine("5. SALIR");
+
+
+
+                opción=int.Parse(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("Introduce El primer numerador");
+                NumA=int.Parse(Console.ReadLine());
+                Console.WriteLine("Introduce El primer denominador");
+                DenA=int.Parse(Console.ReadLine());
+                Console.WriteLine("Introduce El segundo numerador");
+                NumB=int.Parse(Console.ReadLine());
+                Console.WriteLine("Introduce El segundo denominador");
+                DenB=int.Parse(Console.ReadLine());
+            
+                DenA=A.Denominador;
+                NumA=A.Numerador;
+                DenB=B.Denominador;
+                NumB=B.Numerador;
+    
+                switch(opción)
+                {
                 case 1:
                    Console.WriteLine("Elegiste Suma");
                    B.NombreOperando="B";
@@ -78,9 +95,14 @@ namespace Quebrado1
                     Console.ReadLine();
                     Console.Clear();
                     break;
-            }
-            Console.WriteLine($""); 
-            Console.WriteLine(A.ToString());
-            Console.WriteLine(B.ToString());
+                }
             
-            //TO DO: Hacer que se puedan introducir datos por consola
+            
+                    Console.WriteLine($""); 
+                    Console.WriteLine(A.ToString());
+                    Console.WriteLine(B.ToString());
+            
+            }
+        }
+    }
+}           //TO DO: Hacer que se puedan introducir datos por consola
