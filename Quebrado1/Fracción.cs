@@ -10,8 +10,8 @@ namespace Quebrado1
     {
         #region propiedades
         public string NombreOperando { get; set; }
-        public int Numerador { get; set; }
-        public int Denominador { get; set; }
+        public double Numerador { get; set; }
+        public double Denominador { get; set;}
         #endregion
 
         #region Métodos
@@ -20,24 +20,22 @@ namespace Quebrado1
             this.NombreOperando = "A";
             this.Numerador = 0;
             this.Denominador = 1;
+            
         }
-        public Fracción(int numerador,int denominador)
+        public Fracción(double numerador,double denominador)
         {
             this.NombreOperando = "A";
             this.Numerador = numerador;
             this.Denominador = denominador;
         }
-        public Fracción(string nombreOperador,int numerador, int denominador)
+        public Fracción(string nombreOperador,double numerador, double denominador)
         {
             this.NombreOperando = nombreOperador;
             this.Numerador = numerador;
             this.Denominador = denominador;
+            
         }
-        public Fracción Multiplicacion(Fracción B)
-        {
-          return new Fracción(Numerador * B.Numerador , this.Denominador * B.Denominador);
-
-        }
+        
         public static Fracción operator *(Fracción A, Fracción B)
         {
             return new Fracción(A.Numerador * B.Numerador, A.Denominador * B.Denominador);
@@ -46,19 +44,21 @@ namespace Quebrado1
         {
             return new Fracción(A.Numerador * B.Denominador, A.Denominador * B.Numerador);
         }
-        public static Fracción operator +(Fracción A, Fracción B)
-        {
-            return new Fracción(A.Numerador + B.Numerador, A.Denominador );
-        }
-        public static Fracción operator -(Fracción A, Fracción B)
-        {
-            return new Fracción(A.Numerador - B.Numerador, A.Denominador);
-        }
+      
         public override string ToString()
         {
             return $"{this.NombreOperando} = {this.Numerador}/{this.Denominador}";
         }
+       
+        public static Fracción operator +(Fracción A, Fracción B)
+        {
+            return new Fracción(B.Denominador*A.Numerador+A.Denominador*B.Numerador,A.Denominador *B.Denominador);
+        }
+        public static Fracción operator -(Fracción A, Fracción B)
+        {
+            return new Fracción(B.Denominador*A.Numerador-A.Denominador*B.Numerador,A.Denominador *B.Denominador);
+        }
+        
         #endregion
-
     }
 }
