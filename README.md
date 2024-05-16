@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/build-C%23-brightgreen) ![Static Badge](https://img.shields.io/badge/build-Visual%20studio%20community%202022-violet)
+
 <a name="readme-top"></a>
 # 😼Calculadora de fracciones 😼
 Programa de consola realizado con C# 
